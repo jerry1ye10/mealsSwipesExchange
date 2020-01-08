@@ -1,0 +1,21 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'mealSwipeExchange' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for mealSwipeExchange
+    pod 'Firebase/Analytics'
+    pod 'Firebase/Auth'
+    pod 'Firebase/Database'
+  target 'mealSwipeExchangeTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'mealSwipeExchangeUITests' do
+    # Pods for testing
+  end
+
+end

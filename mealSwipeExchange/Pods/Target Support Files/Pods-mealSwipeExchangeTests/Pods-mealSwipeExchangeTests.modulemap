@@ -1,0 +1,6 @@
+framework module Pods_mealSwipeExchangeTests {
+  umbrella header "Pods-mealSwipeExchangeTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

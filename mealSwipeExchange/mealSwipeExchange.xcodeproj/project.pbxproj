@@ -1,0 +1,773 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1672712489A9A1463CA42B4D /* Pods_mealSwipeExchange_mealSwipeExchangeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C795987AD546643FC296C6B /* Pods_mealSwipeExchange_mealSwipeExchangeUITests.framework */; };
+		25B690370B3423190F88C209 /* Pods_mealSwipeExchangeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9D6806430A8854B436D9A9A /* Pods_mealSwipeExchangeTests.framework */; };
+		B64A736156B6389FEA698E73 /* Pods_mealSwipeExchange.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B93D9BEE64E16439A605082E /* Pods_mealSwipeExchange.framework */; };
+		F5006F9323C3D8D4005E7631 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5006F9223C3D8D4005E7631 /* AppDelegate.swift */; };
+		F5006F9523C3D8D4005E7631 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5006F9423C3D8D4005E7631 /* SceneDelegate.swift */; };
+		F5006F9723C3D8D4005E7631 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5006F9623C3D8D4005E7631 /* ContentView.swift */; };
+		F5006F9923C3D8D6005E7631 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5006F9823C3D8D6005E7631 /* Assets.xcassets */; };
+		F5006F9C23C3D8D6005E7631 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5006F9B23C3D8D6005E7631 /* Preview Assets.xcassets */; };
+		F5006F9F23C3D8D6005E7631 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5006F9D23C3D8D6005E7631 /* LaunchScreen.storyboard */; };
+		F5006FAA23C3D8D6005E7631 /* mealSwipeExchangeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5006FA923C3D8D6005E7631 /* mealSwipeExchangeTests.swift */; };
+		F5006FB523C3D8D6005E7631 /* mealSwipeExchangeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5006FB423C3D8D6005E7631 /* mealSwipeExchangeUITests.swift */; };
+		F5006FC323C3D90B005E7631 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F5006FC223C3D90B005E7631 /* GoogleService-Info.plist */; };
+		F5C452D923C4302500CDF836 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5C452D823C4302500CDF836 /* User.swift */; };
+		F5C452DB23C430C200CDF836 /* APIhelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5C452DA23C430C200CDF836 /* APIhelper.swift */; };
+		F5C452DD23C4333600CDF836 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5C452DC23C4333600CDF836 /* LoginView.swift */; };
+		F5C452DF23C433C000CDF836 /* SignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5C452DE23C433C000CDF836 /* SignUp.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F5006FA623C3D8D6005E7631 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F5006F8723C3D8D4005E7631 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F5006F8E23C3D8D4005E7631;
+			remoteInfo = mealSwipeExchange;
+		};
+		F5006FB123C3D8D6005E7631 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F5006F8723C3D8D4005E7631 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F5006F8E23C3D8D4005E7631;
+			remoteInfo = mealSwipeExchange;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2C18A85262D81E7BE43BF6FB /* Pods-mealSwipeExchange.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mealSwipeExchange.release.xcconfig"; path = "Target Support Files/Pods-mealSwipeExchange/Pods-mealSwipeExchange.release.xcconfig"; sourceTree = "<group>"; };
+		4460316053AD0EB6C3947D58 /* Pods-mealSwipeExchangeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mealSwipeExchangeTests.release.xcconfig"; path = "Target Support Files/Pods-mealSwipeExchangeTests/Pods-mealSwipeExchangeTests.release.xcconfig"; sourceTree = "<group>"; };
+		44718779B04A40A6227EE635 /* Pods-mealSwipeExchange-mealSwipeExchangeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mealSwipeExchange-mealSwipeExchangeUITests.release.xcconfig"; path = "Target Support Files/Pods-mealSwipeExchange-mealSwipeExchangeUITests/Pods-mealSwipeExchange-mealSwipeExchangeUITests.release.xcconfig"; sourceTree = "<group>"; };
+		4C795987AD546643FC296C6B /* Pods_mealSwipeExchange_mealSwipeExchangeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_mealSwipeExchange_mealSwipeExchangeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B6955E1D044689AA05794FB /* Pods-mealSwipeExchange-mealSwipeExchangeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mealSwipeExchange-mealSwipeExchangeUITests.debug.xcconfig"; path = "Target Support Files/Pods-mealSwipeExchange-mealSwipeExchangeUITests/Pods-mealSwipeExchange-mealSwipeExchangeUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		70F1C898400091247BE27C84 /* Pods-mealSwipeExchange.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mealSwipeExchange.debug.xcconfig"; path = "Target Support Files/Pods-mealSwipeExchange/Pods-mealSwipeExchange.debug.xcconfig"; sourceTree = "<group>"; };
+		78545997A84227776C3EFD66 /* Pods-mealSwipeExchangeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mealSwipeExchangeTests.debug.xcconfig"; path = "Target Support Files/Pods-mealSwipeExchangeTests/Pods-mealSwipeExchangeTests.debug.xcconfig"; sourceTree = "<group>"; };
+		B93D9BEE64E16439A605082E /* Pods_mealSwipeExchange.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_mealSwipeExchange.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B9D6806430A8854B436D9A9A /* Pods_mealSwipeExchangeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_mealSwipeExchangeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F5006F8F23C3D8D4005E7631 /* mealSwipeExchange.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mealSwipeExchange.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F5006F9223C3D8D4005E7631 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F5006F9423C3D8D4005E7631 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		F5006F9623C3D8D4005E7631 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		F5006F9823C3D8D6005E7631 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F5006F9B23C3D8D6005E7631 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		F5006F9E23C3D8D6005E7631 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F5006FA023C3D8D6005E7631 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F5006FA523C3D8D6005E7631 /* mealSwipeExchangeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = mealSwipeExchangeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F5006FA923C3D8D6005E7631 /* mealSwipeExchangeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mealSwipeExchangeTests.swift; sourceTree = "<group>"; };
+		F5006FAB23C3D8D6005E7631 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F5006FB023C3D8D6005E7631 /* mealSwipeExchangeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = mealSwipeExchangeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F5006FB423C3D8D6005E7631 /* mealSwipeExchangeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mealSwipeExchangeUITests.swift; sourceTree = "<group>"; };
+		F5006FB623C3D8D6005E7631 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F5006FC223C3D90B005E7631 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		F5C452D823C4302500CDF836 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		F5C452DA23C430C200CDF836 /* APIhelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIhelper.swift; sourceTree = "<group>"; };
+		F5C452DC23C4333600CDF836 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		F5C452DE23C433C000CDF836 /* SignUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F5006F8C23C3D8D4005E7631 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B64A736156B6389FEA698E73 /* Pods_mealSwipeExchange.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F5006FA223C3D8D6005E7631 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				25B690370B3423190F88C209 /* Pods_mealSwipeExchangeTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F5006FAD23C3D8D6005E7631 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1672712489A9A1463CA42B4D /* Pods_mealSwipeExchange_mealSwipeExchangeUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		13C7A472221F4EEC6F158512 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				70F1C898400091247BE27C84 /* Pods-mealSwipeExchange.debug.xcconfig */,
+				2C18A85262D81E7BE43BF6FB /* Pods-mealSwipeExchange.release.xcconfig */,
+				5B6955E1D044689AA05794FB /* Pods-mealSwipeExchange-mealSwipeExchangeUITests.debug.xcconfig */,
+				44718779B04A40A6227EE635 /* Pods-mealSwipeExchange-mealSwipeExchangeUITests.release.xcconfig */,
+				78545997A84227776C3EFD66 /* Pods-mealSwipeExchangeTests.debug.xcconfig */,
+				4460316053AD0EB6C3947D58 /* Pods-mealSwipeExchangeTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		1E2F193A95A2BE271DB7858B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B93D9BEE64E16439A605082E /* Pods_mealSwipeExchange.framework */,
+				4C795987AD546643FC296C6B /* Pods_mealSwipeExchange_mealSwipeExchangeUITests.framework */,
+				B9D6806430A8854B436D9A9A /* Pods_mealSwipeExchangeTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F5006F8623C3D8D4005E7631 = {
+			isa = PBXGroup;
+			children = (
+				F5006F9123C3D8D4005E7631 /* mealSwipeExchange */,
+				F5006FA823C3D8D6005E7631 /* mealSwipeExchangeTests */,
+				F5006FB323C3D8D6005E7631 /* mealSwipeExchangeUITests */,
+				F5006F9023C3D8D4005E7631 /* Products */,
+				13C7A472221F4EEC6F158512 /* Pods */,
+				1E2F193A95A2BE271DB7858B /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		F5006F9023C3D8D4005E7631 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F5006F8F23C3D8D4005E7631 /* mealSwipeExchange.app */,
+				F5006FA523C3D8D6005E7631 /* mealSwipeExchangeTests.xctest */,
+				F5006FB023C3D8D6005E7631 /* mealSwipeExchangeUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F5006F9123C3D8D4005E7631 /* mealSwipeExchange */ = {
+			isa = PBXGroup;
+			children = (
+				F5006F9223C3D8D4005E7631 /* AppDelegate.swift */,
+				F5006F9423C3D8D4005E7631 /* SceneDelegate.swift */,
+				F5C452D823C4302500CDF836 /* User.swift */,
+				F5C452DA23C430C200CDF836 /* APIhelper.swift */,
+				F5006F9623C3D8D4005E7631 /* ContentView.swift */,
+				F5C452DC23C4333600CDF836 /* LoginView.swift */,
+				F5C452DE23C433C000CDF836 /* SignUp.swift */,
+				F5006F9823C3D8D6005E7631 /* Assets.xcassets */,
+				F5006FC223C3D90B005E7631 /* GoogleService-Info.plist */,
+				F5006F9D23C3D8D6005E7631 /* LaunchScreen.storyboard */,
+				F5006FA023C3D8D6005E7631 /* Info.plist */,
+				F5006F9A23C3D8D6005E7631 /* Preview Content */,
+			);
+			path = mealSwipeExchange;
+			sourceTree = "<group>";
+		};
+		F5006F9A23C3D8D6005E7631 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				F5006F9B23C3D8D6005E7631 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		F5006FA823C3D8D6005E7631 /* mealSwipeExchangeTests */ = {
+			isa = PBXGroup;
+			children = (
+				F5006FA923C3D8D6005E7631 /* mealSwipeExchangeTests.swift */,
+				F5006FAB23C3D8D6005E7631 /* Info.plist */,
+			);
+			path = mealSwipeExchangeTests;
+			sourceTree = "<group>";
+		};
+		F5006FB323C3D8D6005E7631 /* mealSwipeExchangeUITests */ = {
+			isa = PBXGroup;
+			children = (
+				F5006FB423C3D8D6005E7631 /* mealSwipeExchangeUITests.swift */,
+				F5006FB623C3D8D6005E7631 /* Info.plist */,
+			);
+			path = mealSwipeExchangeUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F5006F8E23C3D8D4005E7631 /* mealSwipeExchange */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F5006FB923C3D8D6005E7631 /* Build configuration list for PBXNativeTarget "mealSwipeExchange" */;
+			buildPhases = (
+				7FE47D6DF8BF3AD6BB2F092B /* [CP] Check Pods Manifest.lock */,
+				F5006F8B23C3D8D4005E7631 /* Sources */,
+				F5006F8C23C3D8D4005E7631 /* Frameworks */,
+				F5006F8D23C3D8D4005E7631 /* Resources */,
+				54079C9521ADC7327F0E2C2A /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = mealSwipeExchange;
+			productName = mealSwipeExchange;
+			productReference = F5006F8F23C3D8D4005E7631 /* mealSwipeExchange.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F5006FA423C3D8D6005E7631 /* mealSwipeExchangeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F5006FBC23C3D8D6005E7631 /* Build configuration list for PBXNativeTarget "mealSwipeExchangeTests" */;
+			buildPhases = (
+				8828850BB8B52467C1839A69 /* [CP] Check Pods Manifest.lock */,
+				F5006FA123C3D8D6005E7631 /* Sources */,
+				F5006FA223C3D8D6005E7631 /* Frameworks */,
+				F5006FA323C3D8D6005E7631 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F5006FA723C3D8D6005E7631 /* PBXTargetDependency */,
+			);
+			name = mealSwipeExchangeTests;
+			productName = mealSwipeExchangeTests;
+			productReference = F5006FA523C3D8D6005E7631 /* mealSwipeExchangeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F5006FAF23C3D8D6005E7631 /* mealSwipeExchangeUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F5006FBF23C3D8D6005E7631 /* Build configuration list for PBXNativeTarget "mealSwipeExchangeUITests" */;
+			buildPhases = (
+				109646CD3DBCFA1FDA2D7C11 /* [CP] Check Pods Manifest.lock */,
+				F5006FAC23C3D8D6005E7631 /* Sources */,
+				F5006FAD23C3D8D6005E7631 /* Frameworks */,
+				F5006FAE23C3D8D6005E7631 /* Resources */,
+				087A1565232D9CDFC108381C /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F5006FB223C3D8D6005E7631 /* PBXTargetDependency */,
+			);
+			name = mealSwipeExchangeUITests;
+			productName = mealSwipeExchangeUITests;
+			productReference = F5006FB023C3D8D6005E7631 /* mealSwipeExchangeUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F5006F8723C3D8D4005E7631 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1120;
+				LastUpgradeCheck = 1120;
+				ORGANIZATIONNAME = "Jerry Ye";
+				TargetAttributes = {
+					F5006F8E23C3D8D4005E7631 = {
+						CreatedOnToolsVersion = 11.2.1;
+					};
+					F5006FA423C3D8D6005E7631 = {
+						CreatedOnToolsVersion = 11.2.1;
+						TestTargetID = F5006F8E23C3D8D4005E7631;
+					};
+					F5006FAF23C3D8D6005E7631 = {
+						CreatedOnToolsVersion = 11.2.1;
+						TestTargetID = F5006F8E23C3D8D4005E7631;
+					};
+				};
+			};
+			buildConfigurationList = F5006F8A23C3D8D4005E7631 /* Build configuration list for PBXProject "mealSwipeExchange" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F5006F8623C3D8D4005E7631;
+			productRefGroup = F5006F9023C3D8D4005E7631 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F5006F8E23C3D8D4005E7631 /* mealSwipeExchange */,
+				F5006FA423C3D8D6005E7631 /* mealSwipeExchangeTests */,
+				F5006FAF23C3D8D6005E7631 /* mealSwipeExchangeUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F5006F8D23C3D8D4005E7631 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5006F9F23C3D8D6005E7631 /* LaunchScreen.storyboard in Resources */,
+				F5006FC323C3D90B005E7631 /* GoogleService-Info.plist in Resources */,
+				F5006F9C23C3D8D6005E7631 /* Preview Assets.xcassets in Resources */,
+				F5006F9923C3D8D6005E7631 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F5006FA323C3D8D6005E7631 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F5006FAE23C3D8D6005E7631 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		087A1565232D9CDFC108381C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-mealSwipeExchange-mealSwipeExchangeUITests/Pods-mealSwipeExchange-mealSwipeExchangeUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-mealSwipeExchange-mealSwipeExchangeUITests/Pods-mealSwipeExchange-mealSwipeExchangeUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-mealSwipeExchange-mealSwipeExchangeUITests/Pods-mealSwipeExchange-mealSwipeExchangeUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		109646CD3DBCFA1FDA2D7C11 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-mealSwipeExchange-mealSwipeExchangeUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		54079C9521ADC7327F0E2C2A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-mealSwipeExchange/Pods-mealSwipeExchange-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-mealSwipeExchange/Pods-mealSwipeExchange-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-mealSwipeExchange/Pods-mealSwipeExchange-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7FE47D6DF8BF3AD6BB2F092B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-mealSwipeExchange-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8828850BB8B52467C1839A69 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-mealSwipeExchangeTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F5006F8B23C3D8D4005E7631 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5C452DF23C433C000CDF836 /* SignUp.swift in Sources */,
+				F5C452DD23C4333600CDF836 /* LoginView.swift in Sources */,
+				F5C452D923C4302500CDF836 /* User.swift in Sources */,
+				F5C452DB23C430C200CDF836 /* APIhelper.swift in Sources */,
+				F5006F9323C3D8D4005E7631 /* AppDelegate.swift in Sources */,
+				F5006F9523C3D8D4005E7631 /* SceneDelegate.swift in Sources */,
+				F5006F9723C3D8D4005E7631 /* ContentView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F5006FA123C3D8D6005E7631 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5006FAA23C3D8D6005E7631 /* mealSwipeExchangeTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F5006FAC23C3D8D6005E7631 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5006FB523C3D8D6005E7631 /* mealSwipeExchangeUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F5006FA723C3D8D6005E7631 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F5006F8E23C3D8D4005E7631 /* mealSwipeExchange */;
+			targetProxy = F5006FA623C3D8D6005E7631 /* PBXContainerItemProxy */;
+		};
+		F5006FB223C3D8D6005E7631 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F5006F8E23C3D8D4005E7631 /* mealSwipeExchange */;
+			targetProxy = F5006FB123C3D8D6005E7631 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F5006F9D23C3D8D6005E7631 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F5006F9E23C3D8D6005E7631 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F5006FB723C3D8D6005E7631 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F5006FB823C3D8D6005E7631 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F5006FBA23C3D8D6005E7631 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 70F1C898400091247BE27C84 /* Pods-mealSwipeExchange.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"mealSwipeExchange/Preview Content\"";
+				DEVELOPMENT_TEAM = 2UWXRNBC4J;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = mealSwipeExchange/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Jerry.mealSwipeExchange;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F5006FBB23C3D8D6005E7631 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2C18A85262D81E7BE43BF6FB /* Pods-mealSwipeExchange.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"mealSwipeExchange/Preview Content\"";
+				DEVELOPMENT_TEAM = 2UWXRNBC4J;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = mealSwipeExchange/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Jerry.mealSwipeExchange;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		F5006FBD23C3D8D6005E7631 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 78545997A84227776C3EFD66 /* Pods-mealSwipeExchangeTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2UWXRNBC4J;
+				INFOPLIST_FILE = mealSwipeExchangeTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Jerry.mealSwipeExchangeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/mealSwipeExchange.app/mealSwipeExchange";
+			};
+			name = Debug;
+		};
+		F5006FBE23C3D8D6005E7631 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4460316053AD0EB6C3947D58 /* Pods-mealSwipeExchangeTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2UWXRNBC4J;
+				INFOPLIST_FILE = mealSwipeExchangeTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Jerry.mealSwipeExchangeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/mealSwipeExchange.app/mealSwipeExchange";
+			};
+			name = Release;
+		};
+		F5006FC023C3D8D6005E7631 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5B6955E1D044689AA05794FB /* Pods-mealSwipeExchange-mealSwipeExchangeUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2UWXRNBC4J;
+				INFOPLIST_FILE = mealSwipeExchangeUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Jerry.mealSwipeExchangeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = mealSwipeExchange;
+			};
+			name = Debug;
+		};
+		F5006FC123C3D8D6005E7631 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 44718779B04A40A6227EE635 /* Pods-mealSwipeExchange-mealSwipeExchangeUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2UWXRNBC4J;
+				INFOPLIST_FILE = mealSwipeExchangeUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Jerry.mealSwipeExchangeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = mealSwipeExchange;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F5006F8A23C3D8D4005E7631 /* Build configuration list for PBXProject "mealSwipeExchange" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F5006FB723C3D8D6005E7631 /* Debug */,
+				F5006FB823C3D8D6005E7631 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F5006FB923C3D8D6005E7631 /* Build configuration list for PBXNativeTarget "mealSwipeExchange" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F5006FBA23C3D8D6005E7631 /* Debug */,
+				F5006FBB23C3D8D6005E7631 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F5006FBC23C3D8D6005E7631 /* Build configuration list for PBXNativeTarget "mealSwipeExchangeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F5006FBD23C3D8D6005E7631 /* Debug */,
+				F5006FBE23C3D8D6005E7631 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F5006FBF23C3D8D6005E7631 /* Build configuration list for PBXNativeTarget "mealSwipeExchangeUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F5006FC023C3D8D6005E7631 /* Debug */,
+				F5006FC123C3D8D6005E7631 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F5006F8723C3D8D4005E7631 /* Project object */;
+}
