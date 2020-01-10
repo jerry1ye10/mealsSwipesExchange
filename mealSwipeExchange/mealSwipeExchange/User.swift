@@ -7,15 +7,22 @@
 //
 
 import Foundation
-struct User {
+struct User: Codable {
     
     var uid: String
+    var firstName: String?
+    var lastName: String?
+    var phoneNumber: String?
+    var year: String?
     var email: String?
-    var displayName: String?
+    var diningHall = ""
+    var hasSwipes = false
+
     
-    init(uid: String, displayName: String?, email: String?) {
+    /*init(uid: String, firstname: String?, email: String?) {
         self.uid = uid
         self.email = email
-        self.displayName = displayName
-    }
+        self.firstName = firstname
+        
+    }*/
 }
