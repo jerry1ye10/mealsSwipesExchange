@@ -8,12 +8,31 @@
 
 import SwiftUI
 import Firebase
+import UserNotifications
 
 
 struct ContentView: View {
     
     @EnvironmentObject var session: FirebaseSession
     @State private var diningHall: String = ""
+    @State var alert = false
+    
+    func setUp(){
+        getUser()
+        print(12)
+        print(self.alert)
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert,.sound,.badge]) { (success, error) in
+            
+            
+           if success {
+                print("All set!")
+            } else if let error = error {
+                print(error.localizedDescription)
+            }
+            
+            self.alert.toggle()
+        }
+    }
     
     func getUser(){
         session.listen()
@@ -23,6 +42,7 @@ struct ContentView: View {
         HStack {
             Group {
             if (session.session != nil){
+                if (session.session!.hasSwipes){
                 VStack{
                     if session.session?.diningHall == ""{
                         Text("No Request Made!")
@@ -42,10 +62,14 @@ struct ContentView: View {
                     }
                 }
             }
+                else{
+                    RequestList()
+                }
+            }
             else{
                 LoginView()
             }
-            }.onAppear(perform: getUser)
+                }.onAppear(perform: setUp)
         }
     }
     func makeRequest(){

@@ -67,6 +67,7 @@ func signUp(email: String, password: String, handler: @escaping AuthDataResultCa
     }
     
     func getAllRequests(){
+        self.users = [User]() 
         db.collection("users").getDocuments() { (querySnapshot, err) in
                 if let err = err {
                     print("Error getting documents: \(err)")

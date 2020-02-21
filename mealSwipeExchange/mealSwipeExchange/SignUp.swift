@@ -63,13 +63,13 @@ struct SignUp: View {
                         Text("Sophomore").tag(1)
                         Text("Junior").tag(2)
                         Text("Senior").tag(3)
-                    }
+                        }.pickerStyle(SegmentedPickerStyle())
                     .padding()
                     Picker(selection: $receiveSwipes, label: Text("Year")) {
                         
                         Text("Yes").tag(0)
                         Text("No").tag(1)
-                    }
+                    }.pickerStyle( SegmentedPickerStyle())
                 }
                 .padding()
                 
