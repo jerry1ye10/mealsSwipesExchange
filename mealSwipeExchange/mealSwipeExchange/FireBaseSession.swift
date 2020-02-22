@@ -57,7 +57,7 @@ func signUp(email: String, password: String, handler: @escaping AuthDataResultCa
     
     func requestMeal(diningHall: String){
         if (self.session != nil){
-            let docRef = self.db.collection("users").document(self.session!.uid).setData(["diningHall": diningHall], merge: true)
+            let docRef = self.db.collection("users").document(self.session!.uid).setData(["diningHall": diningHall, "currentlyRequesting": true], merge: true)
             self.session?.diningHall = diningHall
         }
     }
@@ -74,12 +74,24 @@ func signUp(email: String, password: String, handler: @escaping AuthDataResultCa
                 } else {
                     self.users = [User]() 
                     for document in querySnapshot!.documents {
+                        print(document)
                         var dataDescription = document.data()
-                        var u = User(uid: document.documentID,firstName: dataDescription["firstName"] as! String, lastName: dataDescription["lastName"] as! String,phoneNumber: dataDescription["phoneNumber"] as! String,year: dataDescription["year"] as! String, diningHall: dataDescription["diningHall"] as! String, hasSwipes: dataDescription["hasSwipes"] as! Bool)
+                        print(type(of: dataDescription))
+                        print(dataDescription["firstName"] as! String)
+                        print(dataDescription["year"] as! String)
+                        print(dataDescription["hasSwipes"] as! Bool)
+                        var u = User(uid: document.documentID,firstName: dataDescription["firstName"] as! String, lastName: dataDescription["lastName"] as! String,phoneNumber: dataDescription["phoneNumber"] as! String,year: dataDescription["year"] as! String, diningHall: dataDescription["diningHall"] as! String, hasSwipes: dataDescription["hasSwipes"] as! Bool, currentlyRequesting: self.checkcurrentlyRequesting(data: dataDescription) as! Bool)
                         self.users.append(u)
                     }
                 }
         }
+    }
+   func checkcurrentlyRequesting(data: Dictionary<String,Any>) -> Bool {
+    if data["currentlyRequesting"] == nil{
+        return false
+    }
+    return (data["currentlyRequesting"] as! Bool)
+        
     }
 }
 

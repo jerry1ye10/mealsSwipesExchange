@@ -7,8 +7,8 @@
 //
 
 import Foundation
-struct User: Codable{
-    
+struct User: Codable, Identifiable{
+    var id = UUID()
     var uid: String
     var firstName: String?
     var lastName: String?
@@ -17,6 +17,7 @@ struct User: Codable{
     var email: String?
     var diningHall = ""
     var hasSwipes = false
+    var currentlyRequesting = false 
 
     
     /*init(uid: String, firstname: String?, email: String?) {

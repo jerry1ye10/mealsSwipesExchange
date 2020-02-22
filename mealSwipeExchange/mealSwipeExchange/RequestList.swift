@@ -23,18 +23,28 @@ struct RequestList: View {
         }
     }
     var body: some View {
-        Group{
             NavigationView{
-                    List(session.users, id: \.uid) { user in
-                        if user.diningHall != "" && user.diningHall != nil{
+                    List {
+                        ForEach(session.users) { user in
+                        if user.currentlyRequesting{
+                            NavigationLink(destination: SwiftUIView()){
+                                
+                            
                             RequestRow(request: user.diningHall, name: user.firstName!)
                         }
-                       }.navigationBarItems(trailing: profileButton)
-            }
-        }
+                        }
+                    }
+            }.navigationBarItems(trailing: profileButton)
     }
 }
+}
 
+extension View {
+    func Print(_ vars: Any...) -> some View {
+        for v in vars { print(v) }
+        return EmptyView()
+    }
+}
 
 struct RequestList_Previews: PreviewProvider {
     static var previews: some View {

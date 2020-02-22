@@ -26,6 +26,7 @@
 		F5C452DB23C430C200CDF836 /* FireBaseSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5C452DA23C430C200CDF836 /* FireBaseSession.swift */; };
 		F5C452DD23C4333600CDF836 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5C452DC23C4333600CDF836 /* LoginView.swift */; };
 		F5C452DF23C433C000CDF836 /* SignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5C452DE23C433C000CDF836 /* SignUp.swift */; };
+		F5D0AD0E2401D4A300C399CE /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D0AD0D2401D4A300C399CE /* SwiftUIView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +78,7 @@
 		F5C452DA23C430C200CDF836 /* FireBaseSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireBaseSession.swift; sourceTree = "<group>"; };
 		F5C452DC23C4333600CDF836 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		F5C452DE23C433C000CDF836 /* SignUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp.swift; sourceTree = "<group>"; };
+		F5D0AD0D2401D4A300C399CE /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,6 +165,7 @@
 				F5006F9623C3D8D4005E7631 /* ContentView.swift */,
 				F5A207B223C80D7000847B31 /* RequestRow.swift */,
 				F5A207B423C8149F00847B31 /* RequestList.swift */,
+				F5D0AD0D2401D4A300C399CE /* SwiftUIView.swift */,
 				F5C452DC23C4333600CDF836 /* LoginView.swift */,
 				F5C452DE23C433C000CDF836 /* SignUp.swift */,
 				F5006F9823C3D8D6005E7631 /* Assets.xcassets */,
@@ -442,6 +445,7 @@
 			files = (
 				F5C452DF23C433C000CDF836 /* SignUp.swift in Sources */,
 				F5A207B323C80D7000847B31 /* RequestRow.swift in Sources */,
+				F5D0AD0E2401D4A300C399CE /* SwiftUIView.swift in Sources */,
 				F5C452DD23C4333600CDF836 /* LoginView.swift in Sources */,
 				F5C452D923C4302500CDF836 /* User.swift in Sources */,
 				F5A207B123C6C3CE00847B31 /* snapShotExtensions.swift in Sources */,
