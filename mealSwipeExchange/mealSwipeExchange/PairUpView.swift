@@ -1,5 +1,5 @@
 //
-//  SwiftUIView.swift
+//  PairUpView.swift
 //  mealSwipeExchange
 //
 //  Created by Jerry Ye on 2/22/20.
@@ -9,13 +9,12 @@
 import SwiftUI
 
 struct PairUpView: View {
+    
+    @EnvironmentObject var session: FirebaseSession
+    var u: User
+
     var body: some View {
-        Text("Hello, World!")
+        Text("Hello" + (u.firstName ?? "World"))
     }
 }
 
-struct PairUpView_Previews: PreviewProvider {
-    static var previews: some View {
-        PairUpView()
-    }
-}

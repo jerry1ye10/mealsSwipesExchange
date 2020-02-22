@@ -27,14 +27,15 @@ struct RequestList: View {
                     List {
                         ForEach(session.users) { user in
                         if user.currentlyRequesting{
-                            NavigationLink(destination: SwiftUIView()){
+                            ZStack{
+                                RequestRow(request: user.diningHall, name: user.firstName!)
+                                NavigationLink(destination: PairUpView(u: user)){
+                                EmptyView()}.buttonStyle(PlainButtonStyle())
                                 
-                            
-                            RequestRow(request: user.diningHall, name: user.firstName!)
-                        }
                         }
                     }
-            }.navigationBarItems(trailing: profileButton)
+                        }
+                        }.navigationBarItems(trailing: profileButton).navigationBarBackButtonHidden(true).navigationBarTitle("Requests")
     }
 }
 }
