@@ -31,7 +31,7 @@ struct RequestList: View {
                         }
                        }.navigationBarItems(trailing: profileButton)
             }
-        }.onAppear(perform: session.getAllRequests)
+        }
     }
 }
 

@@ -66,12 +66,13 @@ func signUp(email: String, password: String, handler: @escaping AuthDataResultCa
         self.session?.diningHall = "" 
     }
     
-    func getAllRequests(){
+    init(){
         self.users = [User]() 
-        db.collection("users").getDocuments() { (querySnapshot, err) in
+        db.collection("users").addSnapshotListener { (querySnapshot, err) in
                 if let err = err {
                     print("Error getting documents: \(err)")
                 } else {
+                    self.users = [User]() 
                     for document in querySnapshot!.documents {
                         var dataDescription = document.data()
                         var u = User(uid: document.documentID,firstName: dataDescription["firstName"] as! String, lastName: dataDescription["lastName"] as! String,phoneNumber: dataDescription["phoneNumber"] as! String,year: dataDescription["year"] as! String, diningHall: dataDescription["diningHall"] as! String, hasSwipes: dataDescription["hasSwipes"] as! Bool)
