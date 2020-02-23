@@ -31,7 +31,7 @@ func listen() {
                 docRef.getDocument { (document, error) in
                     if let document = document, document.exists {
                         let dataDescription = document.data()
-                        self.session = User(uid: user.uid, firstName: dataDescription!["firstName"] as! String, lastName: dataDescription!["lastName"] as! String,phoneNumber: dataDescription!["phoneNumber"] as! String,year: dataDescription!["year"] as! String, diningHall: dataDescription!["diningHall"] as! String, hasSwipes: dataDescription!["hasSwipes"] as! Bool)
+                        self.session = User(uid: user.uid, firstName: dataDescription!["firstName"] as! String, lastName: dataDescription!["lastName"] as! String,phoneNumber: dataDescription!["phoneNumber"] as! String,year: dataDescription!["year"] as! String, diningHall: dataDescription!["diningHall"] as! String, hasSwipes: dataDescription!["hasSwipes"] as! Bool, pairings: dataDescription!["pairings"] as! [String])
                     } else {
                         print("Document does not exist")
                     }
@@ -50,6 +50,25 @@ func logOut() {
         self.session = nil
 
 }
+    
+    func createPairing(otherId: String) -> () ->(){
+        return{
+        if (self.session != nil){
+            let docRef = self.db.collection("users").document(self.session!.uid).updateData(["pairings": FieldValue.arrayUnion([otherId])])
+            let docRef2 = self.db.collection("users").document(otherId).updateData(["pairings": FieldValue.arrayUnion([self.session!.uid])])
+            self.session?.pairings.append(otherId)
+        }
+        }
+    }
+    
+    func removePairing(otherId: String) -> () -> (){
+        return {
+        if (self.session != nil){
+            let docRef = self.db.collection("users").document(self.session!.uid).updateData(["pairings": FieldValue.arrayRemove([otherId])])
+            let docRef2 = self.db.collection("users").document(otherId).updateData(["pairings": FieldValue.arrayRemove([self.session!.uid])])
+        }
+    }
+    }
 
 func signUp(email: String, password: String, handler: @escaping AuthDataResultCallback) {
     Auth.auth().createUser(withEmail: email, password: password, completion: handler)
@@ -80,7 +99,8 @@ func signUp(email: String, password: String, handler: @escaping AuthDataResultCa
                         print(dataDescription["firstName"] as! String)
                         print(dataDescription["year"] as! String)
                         print(dataDescription["hasSwipes"] as! Bool)
-                        var u = User(uid: document.documentID,firstName: dataDescription["firstName"] as! String, lastName: dataDescription["lastName"] as! String,phoneNumber: dataDescription["phoneNumber"] as! String,year: dataDescription["year"] as! String, diningHall: dataDescription["diningHall"] as! String, hasSwipes: dataDescription["hasSwipes"] as! Bool, currentlyRequesting: self.checkcurrentlyRequesting(data: dataDescription) as! Bool)
+                        print(dataDescription["lastName"] as! String); print(dataDescription["pairings"])
+                        var u = User(uid: document.documentID,firstName: dataDescription["firstName"] as! String, lastName: dataDescription["lastName"] as! String,phoneNumber: dataDescription["phoneNumber"] as! String,year: dataDescription["year"] as! String, diningHall: dataDescription["diningHall"] as! String, hasSwipes: dataDescription["hasSwipes"] as! Bool, currentlyRequesting: self.checkcurrentlyRequesting(data: dataDescription) as! Bool, pairings: dataDescription["pairings"] as! [String])
                         self.users.append(u)
                     }
                 }

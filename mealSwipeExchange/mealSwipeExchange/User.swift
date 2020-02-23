@@ -17,7 +17,8 @@ struct User: Codable, Identifiable{
     var email: String?
     var diningHall = ""
     var hasSwipes = false
-    var currentlyRequesting = false 
+    var currentlyRequesting = false
+    var pairings = [String]()
 
     
     /*init(uid: String, firstname: String?, email: String?) {

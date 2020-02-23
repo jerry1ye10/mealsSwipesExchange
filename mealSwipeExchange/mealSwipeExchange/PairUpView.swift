@@ -14,7 +14,12 @@ struct PairUpView: View {
     var u: User
 
     var body: some View {
+        VStack{
         Text("Hello" + (u.firstName ?? "World"))
+        Button(action: self.session.createPairing(otherId: u.uid)){
+            Text("Pair up!")
+        }
+        }
     }
 }
 
