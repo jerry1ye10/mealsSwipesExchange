@@ -51,14 +51,13 @@ func logOut() {
 
 }
     
-    func createPairing(otherId: String) -> () ->(){
-        return{
+    func createPairing(otherId: String){
         if (self.session != nil){
             let docRef = self.db.collection("users").document(self.session!.uid).updateData(["pairings": FieldValue.arrayUnion([otherId])])
             let docRef2 = self.db.collection("users").document(otherId).updateData(["pairings": FieldValue.arrayUnion([self.session!.uid])])
             self.session?.pairings.append(otherId)
         }
-        }
+        
     }
     
     func removePairing(otherId: String) -> () -> (){

@@ -5,6 +5,7 @@ import SwiftUI
 struct RequestRow: View {
     var request: String
     var name: String
+    @EnvironmentObject var session: FirebaseSession
 
     var body: some View {
         HStack {
