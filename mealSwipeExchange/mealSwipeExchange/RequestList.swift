@@ -13,9 +13,10 @@ import SwiftUI
 struct RequestList: View {
     
     @EnvironmentObject var session: FirebaseSession
+    @State private var showPairing = false
     
     var profileButton: some View {
-        Button(action: self.session.logOut) {
+        Button(action: {self.showPairing = true}){
             Image(systemName: "person.crop.circle")
                 .imageScale(.large)
                 .accessibility(label: Text("User Profile"))
@@ -35,6 +36,12 @@ struct RequestList: View {
                         }
                     }
                         }
+                        NavigationLink(destination: PairedUpRequest(),
+                                       isActive: self.$showPairing)
+                        { EmptyView() }
+                            .frame(width: 0, height: 0)
+                            .disabled(true)
+                            .hidden()
                         }.navigationBarItems(trailing: profileButton).navigationBarBackButtonHidden(true).navigationBarTitle("Requests")
     }
 }

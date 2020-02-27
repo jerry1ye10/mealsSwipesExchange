@@ -23,6 +23,14 @@ class FirebaseSession: ObservableObject {
 
 //MARK: Functions
 
+    func findUser(id: String) -> User?{
+        for u in users{
+            if u.uid == id{
+                return u
+            }
+        }
+        return nil
+    }
 func listen() {
           _ =  Auth.auth().addStateDidChangeListener { (auth, user) in
             if let user = user {
@@ -67,6 +75,7 @@ func logOut() {
             let docRef = self.db.collection("users").document(self.session!.uid).updateData(["pairings": FieldValue.arrayRemove([otherId])])
             let docRef2 = self.db.collection("users").document(otherId).updateData(["pairings": FieldValue.arrayRemove([self.session!.uid])])
         }
+            self.db.collection("users").document(otherId).updateData(["currentlyRequesting": true])
     }
     }
 
