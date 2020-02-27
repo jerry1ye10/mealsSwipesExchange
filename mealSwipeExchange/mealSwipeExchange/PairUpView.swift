@@ -13,20 +13,19 @@ struct PairUpView: View {
     @EnvironmentObject var session: FirebaseSession
     var u: User
     @State var paired = false
-
+    @Environment(\.presentationMode) var presentation
+    
     var body: some View {
             VStack{
                     Text("Hello" + (u.firstName ?? "World"))
                     Button(action: pair){
                     Text("Pair up!")
-                    }.sheet(isPresented: $paired){
-                        ContentView().environmentObject(self.session).edgesIgnoringSafeArea(.all)
-                }
+                    }
             }
     }
     func pair(){
         self.session.createPairing(otherId: u.uid)
-        paired = true
+        self.presentation.wrappedValue.dismiss()
     }
     
 }
