@@ -89,8 +89,12 @@ func signUp(email: String, password: String, handler: @escaping AuthDataResultCa
             self.session?.diningHall = diningHall
         }
     }
-    func cancelMeal(){
-        let docRef = self.db.collection("users").document(self.session!.uid).setData(["diningHall": ""], merge: true)
+    func cancelMealRequest(){
+        let docRef = self.db.collection("users").document(self.session!.uid).setData(["diningHall": "", "currentlyRequesting":false], merge: true)
+        if (self.session?.pairings.count != 0){
+            let dr = self.db.collection("users").document((self.session?.pairings[0])!).updateData(["pairings": []])
+            let dr2 = self.db.collection("users").document(self.session!.uid).updateData(["pairings": []])
+        }
         self.session?.diningHall = "" 
     }
     

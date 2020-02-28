@@ -23,6 +23,11 @@ struct RequestList: View {
                 .padding()
         }
     }
+    var logoutButton: some View{
+        Button(action: session.logOut){
+            Text("Logout")
+        }
+    }
     var body: some View {
             NavigationView{
                     List {
@@ -42,7 +47,11 @@ struct RequestList: View {
                             .frame(width: 0, height: 0)
                             .disabled(true)
                             .hidden()
-                        }.navigationBarItems(trailing: profileButton).navigationBarBackButtonHidden(true).navigationBarTitle("Requests")
+                        }.navigationBarItems(trailing:
+                            HStack{
+                                profileButton
+                                logoutButton
+                            }).navigationBarBackButtonHidden(true).navigationBarTitle("Requests")
     }
 }
 }
