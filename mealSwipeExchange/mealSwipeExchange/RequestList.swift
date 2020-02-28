@@ -14,6 +14,7 @@ struct RequestList: View {
     
     @EnvironmentObject var session: FirebaseSession
     @State private var showPairing = false
+    @State private var searchText = ""
     
     var profileButton: some View {
         Button(action: {self.showPairing = true}){
@@ -23,6 +24,12 @@ struct RequestList: View {
                 .padding()
         }
     }
+    
+    func searchUp(search: String, element: String) -> Bool{
+        let searchUpper = search.uppercased()
+        let elementUpper = element.uppercased()
+        return searchUpper.contains(elementUpper)
+    }
     var logoutButton: some View{
         Button(action: session.logOut){
             Text("Logout")
@@ -31,8 +38,10 @@ struct RequestList: View {
     var body: some View {
             NavigationView{
                     List {
+                        TextField("Type your search",text: $searchText)
+                        .textFieldStyle(RoundedBorderTextFieldStyle())
                         ForEach(session.users) { user in
-                        if user.currentlyRequesting{
+                            if (user.currentlyRequesting && (self.searchText == ""  || self.searchUp(search: user.diningHall as! String, element: self.searchText))){
                             ZStack{
                                 RequestRow(request: user.diningHall, name: user.firstName!)
                                 NavigationLink(destination: PairUpView(u: user)){
