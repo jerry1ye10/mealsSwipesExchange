@@ -16,12 +16,20 @@ struct RequestList: View {
     @State private var showPairing = false
     @State private var searchText = ""
     
+    
     var profileButton: some View {
+        HStack{
+        if (session.session?.pairings.count != 0){
         Button(action: {self.showPairing = true}){
             Image(systemName: "person.crop.circle")
                 .imageScale(.large)
                 .accessibility(label: Text("User Profile"))
                 .padding()
+        }
+        }
+        else{
+            Text("Not yet paired!")
+        }
         }
     }
     
@@ -56,11 +64,9 @@ struct RequestList: View {
                             .frame(width: 0, height: 0)
                             .disabled(true)
                             .hidden()
-                        }.navigationBarItems(trailing:
-                            HStack{
-                                profileButton
-                                logoutButton
-                            }).navigationBarBackButtonHidden(true).navigationBarTitle("Requests")
+                        }.navigationBarItems(leading:
+                            logoutButton, trailing: profileButton
+                            ).navigationBarBackButtonHidden(true).navigationBarTitle("Requests")
     }
 }
 }
