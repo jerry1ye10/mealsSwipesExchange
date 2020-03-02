@@ -79,6 +79,7 @@
 		F5C452DA23C430C200CDF836 /* FireBaseSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireBaseSession.swift; sourceTree = "<group>"; };
 		F5C452DC23C4333600CDF836 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		F5C452DE23C433C000CDF836 /* SignUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp.swift; sourceTree = "<group>"; };
+		F5C4D310240A99FA00E38D35 /* mealSwipeExchange.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = mealSwipeExchange.entitlements; sourceTree = "<group>"; };
 		F5D0AD0F2401D91400C399CE /* PairUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PairUpView.swift; sourceTree = "<group>"; };
 		F5E5F79E240872A0002E33EC /* PairedUpRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PairedUpRequest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -159,6 +160,7 @@
 		F5006F9123C3D8D4005E7631 /* mealSwipeExchange */ = {
 			isa = PBXGroup;
 			children = (
+				F5C4D310240A99FA00E38D35 /* mealSwipeExchange.entitlements */,
 				F5006F9223C3D8D4005E7631 /* AppDelegate.swift */,
 				F5006F9423C3D8D4005E7631 /* SceneDelegate.swift */,
 				F5C452D823C4302500CDF836 /* User.swift */,
@@ -623,6 +625,7 @@
 			baseConfigurationReference = 70F1C898400091247BE27C84 /* Pods-mealSwipeExchange.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = mealSwipeExchange/mealSwipeExchange.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"mealSwipeExchange/Preview Content\"";
 				DEVELOPMENT_TEAM = 2UWXRNBC4J;
@@ -644,6 +647,7 @@
 			baseConfigurationReference = 2C18A85262D81E7BE43BF6FB /* Pods-mealSwipeExchange.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = mealSwipeExchange/mealSwipeExchange.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"mealSwipeExchange/Preview Content\"";
 				DEVELOPMENT_TEAM = 2UWXRNBC4J;

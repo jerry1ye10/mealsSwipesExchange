@@ -109,13 +109,10 @@ func signUp(email: String, password: String, handler: @escaping AuthDataResultCa
                     for document in querySnapshot!.documents {
                         print(document)
                         var dataDescription = document.data()
-                        print(type(of: dataDescription))
-                        print(dataDescription["firstName"] as! String)
-                        print(dataDescription["year"] as! String)
-                        print(dataDescription["hasSwipes"] as! Bool)
-                        print(dataDescription["lastName"] as! String); print(dataDescription["pairings"])
-                        var u = User(uid: document.documentID,firstName: dataDescription["firstName"] as! String, lastName: dataDescription["lastName"] as! String,phoneNumber: dataDescription["phoneNumber"] as! String,year: dataDescription["year"] as! String, diningHall: dataDescription["diningHall"] as! String, hasSwipes: dataDescription["hasSwipes"] as! Bool, currentlyRequesting: self.checkcurrentlyRequesting(data: dataDescription) as! Bool, pairings: dataDescription["pairings"] as! [String])
+                        if let lastName = dataDescription["lastName"] as? String, let firstName = dataDescription["firstName"] as? String, let phoneNumber = dataDescription["phoneNumber"] as? String, let year = dataDescription["year"] as? String, let diningHall = dataDescription["diningHall"] as? String, let hasSwipes = dataDescription["hasSwipes"] as? Bool, let pairings = dataDescription["pairings"] as? [String] {
+                            var u = User(uid: document.documentID,firstName: firstName, lastName: lastName ,phoneNumber: phoneNumber,year: year, diningHall: diningHall, hasSwipes: hasSwipes, currentlyRequesting: self.checkcurrentlyRequesting(data: dataDescription) as! Bool, pairings: pairings)
                         self.users.append(u)
+                        }
                     }
                 }
         }
