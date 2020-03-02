@@ -12,6 +12,8 @@ import Firebase
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
+    var userID = ""
+    
 
 
 
@@ -42,13 +44,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                     deviceToken: Data) {
         let tokenParts = deviceToken.map { data in String(format: "%02.2hhx", data) }
         let token = tokenParts.joined()
-        _ =  Auth.auth().addStateDidChangeListener { (auth, user) in
-        if let user = user {
-            let docRef = (Firestore.firestore().collection("users") as AnyObject).document(user.uid).updateData(["key": token])
-            }
-        }
-        print(1000001231)
+        if userID != ""{
+            let docRef = (Firestore.firestore().collection("users") as AnyObject).document(userID).updateData(["key": token])
+            print(1000001231)
 
+            }
     }
     
     func application(_ application: UIApplication,

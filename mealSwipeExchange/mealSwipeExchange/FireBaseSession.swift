@@ -40,6 +40,8 @@ func listen() {
                     if let document = document, document.exists {
                         let dataDescription = document.data()
                         self.session = User(uid: user.uid, firstName: dataDescription!["firstName"] as! String, lastName: dataDescription!["lastName"] as! String,phoneNumber: dataDescription!["phoneNumber"] as! String,year: dataDescription!["year"] as! String, diningHall: dataDescription!["diningHall"] as! String, hasSwipes: dataDescription!["hasSwipes"] as! Bool, pairings: dataDescription!["pairings"] as! [String])
+                        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+                        appDelegate.userID = user.uid
                         UIApplication.shared.registerForRemoteNotifications()
                     } else {
                         print("Document does not exist")
