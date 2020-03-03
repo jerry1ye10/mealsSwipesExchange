@@ -30,7 +30,9 @@ struct PairedUpRequest: View {
     
     func cancel(){
         session.removePairing(otherId: (self.session.session?.pairings[0])!)()
+        session.session?.pairings.removeFirst()
         self.presentation.wrappedValue.dismiss()
+        
 
         
     }
