@@ -19,6 +19,7 @@ struct User: Codable, Identifiable{
     var hasSwipes = false
     var currentlyRequesting = false
     var pairings = [String]()
+    var token = ""
 
     
     /*init(uid: String, firstname: String?, email: String?) {

@@ -76,6 +76,7 @@ func logOut() {
         return {
         if (self.session != nil){
             let docRef = self.db.collection("users").document(self.session!.uid).updateData(["pairings": FieldValue.arrayRemove([otherId])])
+            print(1000)
             let docRef2 = self.db.collection("users").document(otherId).updateData(["pairings": FieldValue.arrayRemove([self.session!.uid])])
         }
             self.db.collection("users").document(otherId).updateData(["currentlyRequesting": true])
@@ -95,9 +96,11 @@ func signUp(email: String, password: String, handler: @escaping AuthDataResultCa
     func cancelMealRequest(){
         let docRef = self.db.collection("users").document(self.session!.uid).setData(["diningHall": "", "currentlyRequesting":false], merge: true)
         if (self.session?.pairings.count != 0){
-            let dr = self.db.collection("users").document((self.session?.pairings[0])!).updateData(["pairings": []])
-            let dr2 = self.db.collection("users").document(self.session!.uid).updateData(["pairings": []])
+            let id = self.session?.pairings[0]
+            let dr = self.db.collection("users").document((self.session?.pairings[0])!).updateData(["pairings": FieldValue.arrayRemove([self.session!.uid])])
+            let dr2 = self.db.collection("users").document(self.session!.uid).updateData(["pairings":FieldValue.arrayRemove([id])])
         }
+        self.db.collection("users").document(session!.uid).updateData(["currentlyRequesting": false])
         self.session?.diningHall = "" 
     }
     
@@ -111,8 +114,8 @@ func signUp(email: String, password: String, handler: @escaping AuthDataResultCa
                     for document in querySnapshot!.documents {
                         print(document)
                         var dataDescription = document.data()
-                        if let lastName = dataDescription["lastName"] as? String, let firstName = dataDescription["firstName"] as? String, let phoneNumber = dataDescription["phoneNumber"] as? String, let year = dataDescription["year"] as? String, let diningHall = dataDescription["diningHall"] as? String, let hasSwipes = dataDescription["hasSwipes"] as? Bool, let pairings = dataDescription["pairings"] as? [String] {
-                            var u = User(uid: document.documentID,firstName: firstName, lastName: lastName ,phoneNumber: phoneNumber,year: year, diningHall: diningHall, hasSwipes: hasSwipes, currentlyRequesting: self.checkcurrentlyRequesting(data: dataDescription) as! Bool, pairings: pairings)
+                        if let lastName = dataDescription["lastName"] as? String, let firstName = dataDescription["firstName"] as? String, let phoneNumber = dataDescription["phoneNumber"] as? String, let year = dataDescription["year"] as? String, let diningHall = dataDescription["diningHall"] as? String, let hasSwipes = dataDescription["hasSwipes"] as? Bool, let pairings = dataDescription["pairings"] as? [String], let token = dataDescription["token"] as? String {
+                            var u = User(uid: document.documentID,firstName: firstName, lastName: lastName ,phoneNumber: phoneNumber,year: year, diningHall: diningHall, hasSwipes: hasSwipes, currentlyRequesting: self.checkcurrentlyRequesting(data: dataDescription) as! Bool, pairings: pairings, token: token)
                         self.users.append(u)
                         }
                     }

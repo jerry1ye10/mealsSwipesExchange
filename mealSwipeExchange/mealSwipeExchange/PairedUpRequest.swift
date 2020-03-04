@@ -23,7 +23,7 @@ struct PairedUpRequest: View {
             }
         }
         else{
-            Text("Hello")
+            Text("Your request has been canceled!")
         }
     }
             }
