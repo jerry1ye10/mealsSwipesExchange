@@ -10,7 +10,7 @@ import UIKit
 import Firebase
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, MessagingDelegate {
     
     var userID = ""
     
@@ -21,6 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         print(1000)
         FirebaseApp.configure()
+        Messaging.messaging().delegate = self
 
         return true
     }
@@ -42,14 +43,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication,
                 didRegisterForRemoteNotificationsWithDeviceToken
                     deviceToken: Data) {
-        let tokenParts = deviceToken.map { data in String(format: "%02.2hhx", data) }
-        let token = tokenParts.joined()
-        if userID != ""{
-            let docRef = (Firestore.firestore().collection("users") as AnyObject).document(userID).updateData(["key": token])
-            print(1000001231)
-
-            }
+        InstanceID.instanceID().instanceID { (result, error) in
+          if let error = error {
+            print("Error fetching remote instance ID: \(error)")
+          } else if let result = result {
+            print("Remote instance ID token: \(result.token)")
+            let docRef = (Firestore.firestore().collection("users") as AnyObject).document(self.userID).updateData(["key": result.token])
+          }
+        }
+        Messaging.messaging().apnsToken = deviceToken
     }
+    func messaging(_ messaging: Messaging, didReceiveRegistrationToken fcmToken: String) {
+      print("Firebase registration token: \(fcmToken)")
+
+      let dataDict:[String: String] = ["token": fcmToken]
+      if userID != ""{
+        print(10)
+      let docRef = (Firestore.firestore().collection("users") as AnyObject).document(userID).updateData(["key": fcmToken])
+      }
+    }
+
     
     func application(_ application: UIApplication,
                 didFailToRegisterForRemoteNotificationsWithError

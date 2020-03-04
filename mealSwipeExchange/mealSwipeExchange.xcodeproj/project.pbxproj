@@ -27,6 +27,7 @@
 		F5C452DD23C4333600CDF836 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5C452DC23C4333600CDF836 /* LoginView.swift */; };
 		F5C452DF23C433C000CDF836 /* SignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5C452DE23C433C000CDF836 /* SignUp.swift */; };
 		F5D0AD102401D91400C399CE /* PairUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D0AD0F2401D91400C399CE /* PairUpView.swift */; };
+		F5E3F5E2240F2B2100764B7B /* PushNotificationSender.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E3F5E1240F2B2000764B7B /* PushNotificationSender.swift */; };
 		F5E5F79F240872A0002E33EC /* PairedUpRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E5F79E240872A0002E33EC /* PairedUpRequest.swift */; };
 /* End PBXBuildFile section */
 
@@ -81,6 +82,7 @@
 		F5C452DE23C433C000CDF836 /* SignUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp.swift; sourceTree = "<group>"; };
 		F5C4D310240A99FA00E38D35 /* mealSwipeExchange.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = mealSwipeExchange.entitlements; sourceTree = "<group>"; };
 		F5D0AD0F2401D91400C399CE /* PairUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PairUpView.swift; sourceTree = "<group>"; };
+		F5E3F5E1240F2B2000764B7B /* PushNotificationSender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushNotificationSender.swift; sourceTree = "<group>"; };
 		F5E5F79E240872A0002E33EC /* PairedUpRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PairedUpRequest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -162,6 +164,7 @@
 			children = (
 				F5C4D310240A99FA00E38D35 /* mealSwipeExchange.entitlements */,
 				F5006F9223C3D8D4005E7631 /* AppDelegate.swift */,
+				F5E3F5E1240F2B2000764B7B /* PushNotificationSender.swift */,
 				F5006F9423C3D8D4005E7631 /* SceneDelegate.swift */,
 				F5C452D823C4302500CDF836 /* User.swift */,
 				F5C452DA23C430C200CDF836 /* FireBaseSession.swift */,
@@ -457,6 +460,7 @@
 				F5A207B523C8149F00847B31 /* RequestList.swift in Sources */,
 				F5C452DB23C430C200CDF836 /* FireBaseSession.swift in Sources */,
 				F5006F9323C3D8D4005E7631 /* AppDelegate.swift in Sources */,
+				F5E3F5E2240F2B2100764B7B /* PushNotificationSender.swift in Sources */,
 				F5006F9523C3D8D4005E7631 /* SceneDelegate.swift in Sources */,
 				F5006F9723C3D8D4005E7631 /* ContentView.swift in Sources */,
 				F5E5F79F240872A0002E33EC /* PairedUpRequest.swift in Sources */,
