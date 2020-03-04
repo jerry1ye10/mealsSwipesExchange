@@ -21,10 +21,7 @@ struct RequestList: View {
         HStack{
         if (session.session?.pairings.count != 0){
         Button(action: {self.showPairing = true}){
-            Image(systemName: "person.crop.circle")
-                .imageScale(.large)
-                .accessibility(label: Text("User Profile"))
-                .padding()
+            Text("View your pairing!" )
         }
         }
         else{
