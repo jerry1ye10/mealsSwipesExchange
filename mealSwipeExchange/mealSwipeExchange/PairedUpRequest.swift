@@ -29,7 +29,12 @@ struct PairedUpRequest: View {
             }
     
     func cancel(){
-        session.removePairing(otherId: (self.session.session?.pairings[0])!)()
+        let uid = self.session.session?.pairings[0]
+        session.removePairing(otherId: (uid)!)()
+        let token = session.users.first(where: {$0.uid == uid})?.token
+        if let t = token as? String {
+            session.sender.sendPushNotification(to: t, title: "Pairing Canceled", body: "You have been paired!")
+        }
         session.session?.pairings.removeFirst()
         self.presentation.wrappedValue.dismiss()
         
