@@ -116,6 +116,10 @@ func signUp(email: String, password: String, handler: @escaping AuthDataResultCa
                         var dataDescription = document.data()
                         if let lastName = dataDescription["lastName"] as? String, let firstName = dataDescription["firstName"] as? String, let phoneNumber = dataDescription["phoneNumber"] as? String, let year = dataDescription["year"] as? String, let diningHall = dataDescription["diningHall"] as? String, let hasSwipes = dataDescription["hasSwipes"] as? Bool, let pairings = dataDescription["pairings"] as? [String], let token = dataDescription["key"] as? String {
                             var u = User(uid: document.documentID,firstName: firstName, lastName: lastName ,phoneNumber: phoneNumber,year: year, diningHall: diningHall, hasSwipes: hasSwipes, currentlyRequesting: self.checkcurrentlyRequesting(data: dataDescription) as! Bool, pairings: pairings, token: token)
+                            if (self.session?.uid == document.documentID){
+                                print(123132131231231)
+                                self.session = u
+                            }
                         self.users.append(u)
                         }
                     }

@@ -79,6 +79,7 @@ struct ContentView: View {
     }
     func cancelRequest(){
         session.cancelMealRequest()
+        
     }
 
 }
