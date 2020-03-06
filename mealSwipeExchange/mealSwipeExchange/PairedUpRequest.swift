@@ -17,7 +17,7 @@ struct PairedUpRequest: View {
     var body: some View {
         ZStack{
         if (session.session?.pairings.count != 0){
-            Text("Hello " + (self.session.findUser(id: (self.session.session?.pairings[0])!)?.firstName!)!)
+            Text("Hello, your pairing is " + (self.session.findUser(id: (self.session.session?.pairings[0])!)?.firstName!)!)
             Button(action: cancel){
                 Text("Cancel request!")
             }
