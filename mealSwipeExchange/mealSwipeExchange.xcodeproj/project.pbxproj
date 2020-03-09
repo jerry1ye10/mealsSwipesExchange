@@ -20,6 +20,7 @@
 		F5006FB523C3D8D6005E7631 /* mealSwipeExchangeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5006FB423C3D8D6005E7631 /* mealSwipeExchangeUITests.swift */; };
 		F5006FC323C3D90B005E7631 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F5006FC223C3D90B005E7631 /* GoogleService-Info.plist */; };
 		F54A5E5E2415DE3F00366262 /* FreshmanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F54A5E5D2415DE3F00366262 /* FreshmanView.swift */; };
+		F54A5E6024169F8F00366262 /* mealSwipeExchange.png in Resources */ = {isa = PBXBuildFile; fileRef = F54A5E5F24169F8F00366262 /* mealSwipeExchange.png */; };
 		F5A207B123C6C3CE00847B31 /* snapShotExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A207B023C6C3CE00847B31 /* snapShotExtensions.swift */; };
 		F5A207B323C80D7000847B31 /* RequestRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A207B223C80D7000847B31 /* RequestRow.swift */; };
 		F5A207B523C8149F00847B31 /* RequestList.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A207B423C8149F00847B31 /* RequestList.swift */; };
@@ -75,6 +76,7 @@
 		F5006FB623C3D8D6005E7631 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F5006FC223C3D90B005E7631 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F54A5E5D2415DE3F00366262 /* FreshmanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreshmanView.swift; sourceTree = "<group>"; };
+		F54A5E5F24169F8F00366262 /* mealSwipeExchange.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mealSwipeExchange.png; sourceTree = "<group>"; };
 		F5A207B023C6C3CE00847B31 /* snapShotExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = snapShotExtensions.swift; sourceTree = "<group>"; };
 		F5A207B223C80D7000847B31 /* RequestRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestRow.swift; sourceTree = "<group>"; };
 		F5A207B423C8149F00847B31 /* RequestList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestList.swift; sourceTree = "<group>"; };
@@ -180,6 +182,7 @@
 				F5C452DC23C4333600CDF836 /* LoginView.swift */,
 				F5C452DE23C433C000CDF836 /* SignUp.swift */,
 				F5006F9823C3D8D6005E7631 /* Assets.xcassets */,
+				F54A5E5F24169F8F00366262 /* mealSwipeExchange.png */,
 				F5006FC223C3D90B005E7631 /* GoogleService-Info.plist */,
 				F5006F9D23C3D8D6005E7631 /* LaunchScreen.storyboard */,
 				F5006FA023C3D8D6005E7631 /* Info.plist */,
@@ -324,6 +327,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F5006F9F23C3D8D6005E7631 /* LaunchScreen.storyboard in Resources */,
+				F54A5E6024169F8F00366262 /* mealSwipeExchange.png in Resources */,
 				F5006FC323C3D90B005E7631 /* GoogleService-Info.plist in Resources */,
 				F5006F9C23C3D8D6005E7631 /* Preview Assets.xcassets in Resources */,
 				F5006F9923C3D8D6005E7631 /* Assets.xcassets in Resources */,

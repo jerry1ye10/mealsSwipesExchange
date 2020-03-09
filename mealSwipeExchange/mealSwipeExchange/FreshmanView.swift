@@ -15,6 +15,7 @@ struct FreshmanView: View {
     
     var body: some View {
         VStack{
+            Image("mealSwipeExchange")
         if session.session?.diningHall == ""{
             Text("No Request Made!")
             TextField("Enter Requested Dining Hall", text: $diningHall)
