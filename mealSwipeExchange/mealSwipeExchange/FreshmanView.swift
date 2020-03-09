@@ -23,7 +23,10 @@ struct FreshmanView: View {
             }
         }
         else {
-            Text("Current Request: " + (session.session?.diningHall ?? ""))
+            if session.session?.pairings.count != 0{
+                Text("You are currently paired!")
+            }
+            Text("Current Request: \(diningHall)")
             Button(action: cancelRequest) {
                 Text("Cancel Request")
             }
@@ -45,5 +48,14 @@ struct FreshmanView: View {
         
     }
 
+}
+
+struct FreshmanView_Previews: PreviewProvider {
+    
+    static var previews: some View {
+        FreshmanView().environmentObject(FirebaseSession())
+
+    }
+    
 }
 
