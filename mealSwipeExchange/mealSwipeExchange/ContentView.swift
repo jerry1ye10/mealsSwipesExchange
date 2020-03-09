@@ -44,22 +44,7 @@ struct ContentView: View {
             if (session.session != nil){
                 if (session.session!.hasSwipes){
                 VStack{
-                    if session.session?.diningHall == ""{
-                        Text("No Request Made!")
-                        TextField("Enter Requested Dining Hall", text: $diningHall)
-                            Button(action: makeRequest) {
-                            Text("Request!")
-                        }
-                    }
-                    else {
-                        Text("Current Request: " + session.session!.diningHall)
-                        Button(action: cancelRequest) {
-                            Text("Cancel Request")
-                        }
-                    }
-                    Button(action: self.session.logOut){
-                        Text("Log Out")
-                    }
+                    FreshmanView()
                 }
             }
                 else{
