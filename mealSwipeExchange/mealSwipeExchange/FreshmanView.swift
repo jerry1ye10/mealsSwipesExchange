@@ -14,11 +14,11 @@ struct FreshmanView: View {
     @State private var diningHall: String = ""
     
     var body: some View {
+        
         VStack{
             Image("mealSwipeExchange")
             .resizable()
-                .padding(.bottom, 100.0)
-                .frame(width: 400.0)
+                .padding([.leading, .bottom, .trailing], 50.0)
                 .scaledToFit()
         if session.session?.diningHall == ""{
             Text("No Request Made!")
@@ -40,6 +40,10 @@ struct FreshmanView: View {
             Text("Log Out")
         }
     }
+        .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: Alignment.topLeading)
+        .background(Color.blue.edgesIgnoringSafeArea(.all))
+        
+
     }
     
     func makeRequest(){
