@@ -21,11 +21,17 @@ struct PairedUpRequest: View {
             Image("mealSwipeExchange").resizable()
             .padding([.leading, .bottom, .trailing], 50.0)
             .scaledToFit()
-            Text("Name: \(user.firstName!) \(user.lastName!)")
-            Text("Phone Number: \(user.phoneNumber!)")
+            Text("Name: \(user.firstName!)  \(user.lastName!)")
+                .font(.title)
+                .padding(.bottom, 20.0)
+            Text("Phone Number: \(user.phoneNumber!)").font(.title).padding(.bottom, 20.0)
+
+            Text("Dining Hall: \(user.diningHall)").font(.title).padding(.bottom, 20.0)
+            Text("Time: Lunch, 12:00 PM").font(.title)
             Button(action: cancel){
                 Text("Cancel request!").foregroundColor(.red)
             }
+            .padding(.top, 30.0)
         }
         else{
             Text("Your request has been canceled!")
