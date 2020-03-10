@@ -18,7 +18,9 @@ struct PairedUpRequest: View {
     var body: some View {
         VStack{
         if (session.session?.pairings.count != 0){
-            Text(user.firstName!)
+            Image("mealSwipeExchange")
+            Text("Name: \(user.firstName!) \(user.lastName!)")
+            Text("Phone Number: \(user.phoneNumber!)")
             Button(action: cancel){
                 Text("Cancel request!")
             }
