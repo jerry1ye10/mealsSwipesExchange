@@ -12,12 +12,13 @@ struct PairedUpRequest: View {
     
     @EnvironmentObject var session: FirebaseSession
     @Environment(\.presentationMode) var presentation
+    var user : User
 
     
     var body: some View {
-        ZStack{
+        VStack{
         if (session.session?.pairings.count != 0){
-            Text("Hello, your pairing is " + (self.session.findUser(id: (self.session.session?.pairings[0])!)?.firstName!)!)
+            Text(user.firstName!)
             Button(action: cancel){
                 Text("Cancel request!")
             }

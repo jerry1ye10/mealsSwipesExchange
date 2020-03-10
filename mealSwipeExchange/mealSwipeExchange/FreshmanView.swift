@@ -12,6 +12,7 @@ struct FreshmanView: View {
     
     @EnvironmentObject var session: FirebaseSession
     @State private var diningHall: String = ""
+    @State private var showPairing = false
     
     var body: some View {
         
@@ -25,27 +26,33 @@ struct FreshmanView: View {
             TextField("Enter Requested Dining Hall", text: $diningHall)
                 Button(action: makeRequest) {
                 Text("Request!")
-            }
+                }.foregroundColor(.red)
         }
         else {
             if session.session?.pairings.count != 0{
-                Text("You are currently paired!")
+                Button(action: {self.showPairing.toggle()}){
+                    Text("View your current pairing")
+
+                }.foregroundColor(.red)
             }
             Text("Current Request: \(diningHall)")
             Button(action: cancelRequest) {
                 Text("Cancel Request")
-            }
+            }.foregroundColor(.red)
         }
         Button(action: self.session.logOut){
             Text("Log Out")
-        }
+        }.foregroundColor(.red)
     }
         .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: Alignment.topLeading)
         .background(Color.blue.edgesIgnoringSafeArea(.all))
+        .sheet(isPresented: $showPairing) {
+            EmptyView()
+        }
+        
         
 
     }
-    
     func makeRequest(){
         if !diningHall.isEmpty{
             self.session.requestMeal(diningHall: diningHall)
