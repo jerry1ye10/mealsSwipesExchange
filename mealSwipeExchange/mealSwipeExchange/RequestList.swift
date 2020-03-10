@@ -55,12 +55,14 @@ struct RequestList: View {
                         }
                     }
                         }
-                        NavigationLink(destination: PairedUpRequest(),
+                        if (session.session?.pairings.count != 0){
+                        NavigationLink(destination: PairedUpRequest(user: self.session.findUser(id: ((self.session.session?.pairings[0])!))!),
                                        isActive: self.$showPairing)
                         { EmptyView() }
                             .frame(width: 0, height: 0)
                             .disabled(true)
                             .hidden()
+                        }
                         }.navigationBarItems(leading:
                             logoutButton, trailing: profileButton
                             ).navigationBarBackButtonHidden(true).navigationBarTitle("Requests")
