@@ -18,17 +18,19 @@ struct PairedUpRequest: View {
     var body: some View {
         VStack{
         if (session.session?.pairings.count != 0){
-            Image("mealSwipeExchange")
+            Image("mealSwipeExchange").resizable()
+            .padding([.leading, .bottom, .trailing], 50.0)
+            .scaledToFit()
             Text("Name: \(user.firstName!) \(user.lastName!)")
             Text("Phone Number: \(user.phoneNumber!)")
             Button(action: cancel){
-                Text("Cancel request!")
+                Text("Cancel request!").foregroundColor(.red)
             }
         }
         else{
             Text("Your request has been canceled!")
         }
-    }
+    }.frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: Alignment.topLeading)
             }
     
     func cancel(){
