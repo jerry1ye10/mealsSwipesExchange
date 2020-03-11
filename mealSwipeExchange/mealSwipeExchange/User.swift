@@ -20,6 +20,7 @@ struct User: Codable, Identifiable{
     var currentlyRequesting = false
     var pairings = [String]()
     var token = ""
+    var mealTime: Date?
 
     
     /*init(uid: String, firstname: String?, email: String?) {
