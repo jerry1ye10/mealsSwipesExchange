@@ -75,7 +75,7 @@
 		F5006FB423C3D8D6005E7631 /* mealSwipeExchangeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mealSwipeExchangeUITests.swift; sourceTree = "<group>"; };
 		F5006FB623C3D8D6005E7631 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F5006FC223C3D90B005E7631 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		F54A5E5D2415DE3F00366262 /* FreshmanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreshmanView.swift; sourceTree = "<group>"; };
+		F54A5E5D2415DE3F00366262 /* FreshmanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreshmanView.swift; sourceTree = "<group>"; usesTabs = 0; };
 		F54A5E5F24169F8F00366262 /* mealSwipeExchange.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mealSwipeExchange.png; sourceTree = "<group>"; };
 		F5A207B023C6C3CE00847B31 /* snapShotExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = snapShotExtensions.swift; sourceTree = "<group>"; };
 		F5A207B223C80D7000847B31 /* RequestRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestRow.swift; sourceTree = "<group>"; };

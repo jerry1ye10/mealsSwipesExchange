@@ -13,6 +13,7 @@ struct FreshmanView: View {
     @EnvironmentObject var session: FirebaseSession
     @State private var diningHall: String = ""
     @State private var showPairing = false
+    @State private var currentDate = Date()
     
     var body: some View {
         
@@ -24,9 +25,12 @@ struct FreshmanView: View {
         if session.session?.diningHall == ""{
             Text("No Request Made!")
             TextField("Enter Requested Dining Hall", text: $diningHall)
+                .padding(.leading, 100.0)
+            DatePicker("", selection: $currentDate, displayedComponents: [.date, .hourAndMinute])
+            .labelsHidden()
                 Button(action: makeRequest) {
                 Text("Request!")
-                }.foregroundColor(.red)
+                    }.foregroundColor(.red)
         }
         else {
             if session.session?.pairings.count != 0{
@@ -35,7 +39,7 @@ struct FreshmanView: View {
 
                 }.foregroundColor(.red)
             }
-            Text("Current Request: \(diningHall)")
+            Text("Current Request: \(diningHall) at \(currentDate)")
             Button(action: cancelRequest) {
                 Text("Cancel Request")
             }.foregroundColor(.red)
