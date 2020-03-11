@@ -26,6 +26,7 @@ struct FreshmanView: View {
             Text("No Request Made!")
             TextField("Enter Requested Dining Hall", text: $diningHall)
                 .padding(.leading, 100.0)
+            Text("Pick a time")
             DatePicker("", selection: $currentDate, displayedComponents: [.date, .hourAndMinute])
             .labelsHidden()
                 Button(action: makeRequest) {

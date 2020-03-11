@@ -25,7 +25,9 @@ class FirebaseSession: ObservableObject {
 //MARK: Functions
 
     func findUser(id: String) -> User?{
+        print(id)
         for u in users{
+            print(u.uid)
             if u.uid == id{
                 return u
             }
@@ -114,8 +116,12 @@ func signUp(email: String, password: String, handler: @escaping AuthDataResultCa
                     self.users = [User]() 
                     for document in querySnapshot!.documents {
                         var dataDescription = document.data()
-                        if let lastName = dataDescription["lastName"] as? String, let firstName = dataDescription["firstName"] as? String, let phoneNumber = dataDescription["phoneNumber"] as? String, let year = dataDescription["year"] as? String, let diningHall = dataDescription["diningHall"] as? String, let hasSwipes = dataDescription["hasSwipes"] as? Bool, let pairings = dataDescription["pairings"] as? [String], let token = dataDescription["key"] as? String, let date = dataDescription["date"] as? Date ?? nil {
-                            var u = User(uid: document.documentID,firstName: firstName, lastName: lastName ,phoneNumber: phoneNumber,year: year, diningHall: diningHall, hasSwipes: hasSwipes, currentlyRequesting: self.checkcurrentlyRequesting(data: dataDescription) as! Bool, pairings: pairings, token: token, mealTime: date)
+                        print(101)
+                        if let lastName = dataDescription["lastName"] as? String, let firstName = dataDescription["firstName"] as? String, let phoneNumber = dataDescription["phoneNumber"] as? String, let year = dataDescription["year"] as? String, let diningHall = dataDescription["diningHall"] as? String, let hasSwipes = dataDescription["hasSwipes"] as? Bool, let pairings = dataDescription["pairings"] as? [String], let token = dataDescription["key"] as? String, let date = dataDescription["date"] as? Timestamp{
+                            //let date = (dataDescription["date"]! as! Timestamp) ?? nil
+                                
+                                //.dateValue() ?? nil
+                            var u = User(uid: document.documentID,firstName: firstName, lastName: lastName ,phoneNumber: phoneNumber,year: year, diningHall: diningHall, hasSwipes: hasSwipes, currentlyRequesting: self.checkcurrentlyRequesting(data: dataDescription) as! Bool, pairings: pairings, token: token, mealTime: date.dateValue() )
                             if (self.session?.uid == document.documentID){
                                 print(123132131231231)
                                 self.session = u

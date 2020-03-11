@@ -48,7 +48,7 @@ struct RequestList: View {
                         ForEach(session.users) { user in
                             if (user.currentlyRequesting && (self.searchText == ""  || self.searchUp(search: user.diningHall as! String, element: self.searchText))){
                             ZStack{
-                                RequestRow(request: user.diningHall, name: user.firstName!)
+                                RequestRow(request: user.diningHall, name: user.firstName!,time: user.mealTime)
                                 NavigationLink(destination: PairUpView(u: user)){
                                 EmptyView()}.buttonStyle(PlainButtonStyle())
                                 
@@ -56,7 +56,9 @@ struct RequestList: View {
                     }
                         }
                         if (session.session?.pairings.count != 0){
-                        NavigationLink(destination: PairedUpRequest(user: self.session.findUser(id: ((self.session.session?.pairings[0])!))!),
+                            Print(self.session.session?.pairings[0])
+                            Print(self.session.findUser(id: (self.session.session?.pairings[0])!)!)
+                        NavigationLink(destination: PairedUpRequest(user: self.session.findUser(id: (self.session.session?.pairings[0])!)!),
                                        isActive: self.$showPairing)
                         { EmptyView() }
                             .frame(width: 0, height: 0)
