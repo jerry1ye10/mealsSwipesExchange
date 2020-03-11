@@ -88,9 +88,9 @@ func signUp(email: String, password: String, handler: @escaping AuthDataResultCa
     Auth.auth().createUser(withEmail: email, password: password, completion: handler)
     }
     
-    func requestMeal(diningHall: String){
+    func requestMeal(diningHall: String, time: Date){
         if (self.session != nil){
-            let docRef = self.db.collection("users").document(self.session!.uid).setData(["diningHall": diningHall, "currentlyRequesting": true], merge: true)
+            let docRef = self.db.collection("users").document(self.session!.uid).setData(["diningHall": diningHall, "currentlyRequesting": true, "date": time], merge: true)
             self.session?.diningHall = diningHall
         }
     }

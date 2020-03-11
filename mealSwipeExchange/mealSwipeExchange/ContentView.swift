@@ -57,16 +57,6 @@ struct ContentView: View {
                 }.onAppear(perform: setUp)
         }
     }
-    func makeRequest(){
-        if !diningHall.isEmpty{
-            self.session.requestMeal(diningHall: diningHall)
-        }
-    }
-    func cancelRequest(){
-        session.cancelMealRequest()
-        
-    }
-
 }
 
 struct ContentView_Previews: PreviewProvider {

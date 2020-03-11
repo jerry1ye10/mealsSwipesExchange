@@ -59,7 +59,7 @@ struct FreshmanView: View {
     }
     func makeRequest(){
         if !diningHall.isEmpty{
-            self.session.requestMeal(diningHall: diningHall)
+            self.session.requestMeal(diningHall: diningHall, time: currentDate)
         }
     }
     
