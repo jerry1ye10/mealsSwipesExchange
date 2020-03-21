@@ -18,6 +18,8 @@ struct FreshmanView: View {
     var body: some View {
         
         VStack{
+            Print(self.session.session?.pairings[0])
+            Print(1213211010)
             Image("mealSwipeExchange")
             .resizable()
                 .padding([.leading, .bottom, .trailing], 50.0)
@@ -52,12 +54,14 @@ struct FreshmanView: View {
         .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: Alignment.topLeading)
         .background(Color.blue.edgesIgnoringSafeArea(.all))
         .sheet(isPresented: $showPairing) {
-            EmptyView()
+            PairedUpRequest(user: self.session.findUser(id: (self.session.session?.pairings[0])!)!).environmentObject(self.session)
         }
         
         
 
     }
+    
+    
     func makeRequest(){
         if !diningHall.isEmpty{
             self.session.requestMeal(diningHall: diningHall, time: currentDate)
@@ -69,6 +73,12 @@ struct FreshmanView: View {
         
     }
 
+}
+extension View {
+    func Print(_ vars: Any...) -> some View {
+        for v in vars { print(v) }
+        return EmptyView()
+    }
 }
 
 struct FreshmanView_Previews: PreviewProvider {

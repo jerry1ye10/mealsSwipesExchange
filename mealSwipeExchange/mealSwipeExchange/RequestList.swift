@@ -72,12 +72,6 @@ struct RequestList: View {
 }
 }
 
-extension View {
-    func Print(_ vars: Any...) -> some View {
-        for v in vars { print(v) }
-        return EmptyView()
-    }
-}
 
 struct RequestList_Previews: PreviewProvider {
     static var previews: some View {
