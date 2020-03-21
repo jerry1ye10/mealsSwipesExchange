@@ -20,7 +20,7 @@ struct RequestList: View {
     var profileButton: some View {
         HStack{
         if (session.session?.pairings.count != 0){
-        Button(action: {self.showPairing = true}){
+            Button(action: {self.showPairing = true}){
             Text("View your pairing!" )
         }
         }

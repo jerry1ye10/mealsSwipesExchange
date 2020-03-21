@@ -18,7 +18,6 @@ struct FreshmanView: View {
     var body: some View {
         
         VStack{
-            Print(1213211010)
             Image("mealSwipeExchange")
             .resizable()
                 .padding([.leading, .bottom, .trailing], 50.0)
