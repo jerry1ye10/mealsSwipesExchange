@@ -19,6 +19,7 @@ struct SignUp: View {
     @State private var phoneNumber: String = ""
     @State private var year = 0
     @State private var receiveSwipes = 0
+    @State private var attemptedLogin = false
     let years = ["Freshman", "Sophomore", "Junior", "Senior"]
     
     @EnvironmentObject var session: FirebaseSession
@@ -26,6 +27,10 @@ struct SignUp: View {
     var body: some View {
         Group {
             VStack {
+                if attemptedLogin{
+                    Text("Invalid Username or Password attempted")
+                        .foregroundColor(Color.red)
+                }
                 HStack {
                     Text("Email")
                     TextField("Enter Email Address", text: $email)
@@ -86,6 +91,8 @@ struct SignUp: View {
             session.signUp(email: email, password: password) { (result, error) in
                 if error != nil {
                     print("Error")
+                    self.attemptedLogin = true
+                    print(error)
                 }
                 else{
                     var giveSwipes = true
