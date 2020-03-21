@@ -56,8 +56,6 @@ struct RequestList: View {
                     }
                         }
                         if (session.session?.pairings.count != 0){
-                            Print(self.session.session?.pairings[0])
-                            Print(self.session.findUser(id: (self.session.session?.pairings[0])!)!)
                         NavigationLink(destination: PairedUpRequest(user: self.session.findUser(id: (self.session.session?.pairings[0])!)!),
                                        isActive: self.$showPairing)
                         { EmptyView() }

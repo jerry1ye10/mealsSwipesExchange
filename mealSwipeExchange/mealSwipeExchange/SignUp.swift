@@ -28,7 +28,7 @@ struct SignUp: View {
         Group {
             VStack {
                 if attemptedLogin{
-                    Text("Invalid Username or Password attempted")
+                    Text("Invalid Username or password attempted")
                         .foregroundColor(Color.red)
                 }
                 HStack {
@@ -99,7 +99,7 @@ struct SignUp: View {
                     if self.receiveSwipes == 0{
                         giveSwipes = false
                     }
-                    self.session.db.collection("users").document(Auth.auth().currentUser!.uid).setData(["firstName": self.firstName, "lastName": self.lastName, "phoneNumber": self.phoneNumber, "year": self.years[self.year], "email": self.email, "diningHall": "", "hasSwipes": giveSwipes, "pairings": [], "key": ""] )
+                    self.session.db.collection("users").document(Auth.auth().currentUser!.uid).setData(["firstName": self.firstName, "lastName": self.lastName, "phoneNumber": self.phoneNumber, "year": self.years[self.year], "email": self.email, "diningHall": "", "hasSwipes": giveSwipes, "pairings": [], "key": "", "date": NSDate()] )
                 }
                 
             }
