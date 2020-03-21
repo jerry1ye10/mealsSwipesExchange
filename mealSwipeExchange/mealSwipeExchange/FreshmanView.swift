@@ -18,7 +18,6 @@ struct FreshmanView: View {
     var body: some View {
         
         VStack{
-            Print(self.session.session?.pairings[0])
             Print(1213211010)
             Image("mealSwipeExchange")
             .resizable()
