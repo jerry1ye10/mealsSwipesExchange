@@ -8,6 +8,8 @@
 
 import SwiftUI
 import UIKit
+import FirebaseAuth
+import Firebase
 
 struct LoginView: View {
     
@@ -33,6 +35,9 @@ struct LoginView: View {
                 Text("Sign In")
             }
             .padding()
+            Button(action: resetPassword) {
+                Text("Reset Password")
+            }
             
             NavigationLink(destination: SignUp()) {
                 Text("Sign Up")
@@ -52,6 +57,10 @@ struct LoginView: View {
                 self.email = ""
                 self.password = ""
             }
+        }
+    }
+    func resetPassword(){
+       Auth.auth().sendPasswordReset(withEmail: email) { error in
         }
     }
 }
