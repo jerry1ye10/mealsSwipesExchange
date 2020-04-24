@@ -20,12 +20,16 @@ struct SignUp: View {
     @State private var year = 0
     @State private var receiveSwipes = 0
     @State private var attemptedLogin = false
+    @State private var pickerVisible = false
     let years = ["Freshman", "Sophomore", "Junior", "Senior"]
     
     @EnvironmentObject var session: FirebaseSession
     
     var body: some View {
-        Group {
+        NavigationView{
+            Form{
+                Section(header: Text("Sign Up")){
+                    
             VStack {
                 if attemptedLogin{
                     Text("Invalid Username or password attempted")
@@ -61,14 +65,16 @@ struct SignUp: View {
                 }
                 .padding()
                 
+                
                 HStack {
+                    
                     Picker(selection: $year, label: Text("Year")) {
                         
                         Text("Freshman").tag(0)
                         Text("Sophomore").tag(1)
                         Text("Junior").tag(2)
                         Text("Senior").tag(3)
-                        }.pickerStyle(SegmentedPickerStyle())
+                        }.pickerStyle(DefaultPickerStyle())
                     .padding()
                     Picker(selection: $receiveSwipes, label: Text("Year")) {
                         
@@ -83,7 +89,8 @@ struct SignUp: View {
                 }
             }
         }
-        .padding()
+            }.navigationBarTitle("Sign Up')
+        }
     }
     
     func signUp() {
